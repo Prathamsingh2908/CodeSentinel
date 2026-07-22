@@ -5,7 +5,7 @@ CodeSentinel is a GitHub App that automatically reviews pull requests using the 
 The smallest useful version: install it on a repo, open a PR, get line-level feedback without asking anyone.
 
 <p align="center">
-  <a href="https://drive.google.com/file/d/1b5Yq-9E9MgM398rGQ6072eYVSFH2t5tE/view">
+  <a href="https://www.youtube.com/watch?v=eUuC07FqDHA">
     <img src="https://img.shields.io/badge/Watch-Demo-blue?style=for-the-badge&logo=youtube" alt="Demo">
   </a>
   <a href="https://github.com/apps/code-sentinel1">
