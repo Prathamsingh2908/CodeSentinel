@@ -27,7 +27,11 @@ const ghApp = new App({
 });
 
 app.use(express.json());
-
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'CodeSentinel is running 🚀'
+  });
+});
 app.post('/webhook', async (req, res) => {
   const event = req.headers['x-github-event'];
   const payload = req.body;
