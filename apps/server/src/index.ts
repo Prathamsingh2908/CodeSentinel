@@ -45,7 +45,7 @@ app.post('/webhook', async (req, res) => {
         owner: repository.owner.login,
         repo: repository.name,
         issue_number: pull_request.number,
-        body: '⏳ **CodeWatch AI is reviewing this PR.** Hang tight while I analyze the changes and prepare feedback.'
+        body: '⏳ **CodeSentinel AI is reviewing this PR.** Hang tight while I analyze the changes and prepare feedback.'
       });
 
       const placeholderCommentId = placeholderComment.id;

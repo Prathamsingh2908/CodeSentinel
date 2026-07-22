@@ -103,7 +103,7 @@ export const reviewWorker = new Worker('review-queue', async (job) => {
           owner,
           repo,
           comment_id: commentId,
-          body: `✅ **CodeWatch AI Review Complete** for \`${filePath.split('/').pop()}\`\n\nNo issues were found in this chunk.`
+          body: `✅ **CodeSentinel AI Review Complete** for \`${filePath.split('/').pop()}\`\n\nNo issues were found in this chunk.`
         });
       }
       console.log(`✅ No issues found by AI for PR #${pullNumber}`);
@@ -116,7 +116,7 @@ export const reviewWorker = new Worker('review-queue', async (job) => {
           owner,
           repo,
           comment_id: commentId,
-          body: `❌ **CodeWatch AI Review Failed** for \`${filePath.split('/').pop()}\`.\n\nPlease retry by pushing a new commit or re-opening this PR.`
+          body: `❌ **CodeSentinel AI Review Failed** for \`${filePath.split('/').pop()}\`.\n\nPlease retry by pushing a new commit or re-opening this PR.`
         });
       } catch (patchError) {
         console.error('❌ Failed to patch placeholder comment after worker error:', patchError);
