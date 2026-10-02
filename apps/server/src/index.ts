@@ -11,7 +11,7 @@ import { rateLimitRedis } from './config/redis.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = Number(process.env.PORT) || 3001;
 
 // --- CONFIGURATION ---
 const MAX_DIFF_SIZE_BYTES = 100 * 1024; // 100 KB limit to protect costs
@@ -175,4 +175,4 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
   }
 });
 
-app.listen(PORT, () => console.log(`✅ Server ready on port ${PORT}`));
+app.listen(PORT, "0.0.0.0", () => console.log(`✅ Server ready on port ${PORT}`));
